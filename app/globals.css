@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --t1-red: #ea0a2a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-t1-red: var(--t1-red);
+  --font-bebas: var(--font-bebas);
+  --font-manrope: var(--font-manrope);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 0.05em;
+}
+
+canvas {
+  display: block; /* Prevents tiny scrollbar issues */
+}
+
+/* Custom Utilities for Hide/Show */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
